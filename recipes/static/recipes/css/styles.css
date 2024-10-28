@@ -1,7 +1,7 @@
 :root {
     --color-primary: #269fe6;
     --color-primary-hover: #2086c2;
-    --color-primary-dark: #13141f;
+    --color-primary-dark: #11121d;
     --color-primary-dark-hover: #212336;
     --color-primary-light: #d4ecfa;
     --color-primary-light-hover: #bdd8e7;
@@ -64,6 +64,10 @@ h6 {
 }
 
 .main-header-container {
+    background: var(--color-primary-dark);
+}
+
+.main-header {
     background: var(--color-primary-dark);
 }
 
