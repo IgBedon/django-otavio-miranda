@@ -1,21 +1,11 @@
-{% include 'recipes/components/head.html' %}
+{% extends 'global/base.html' %}
 
-<body>
-    {% include 'recipes/components/header.html' %}
-    {% include 'recipes/components/search.html' %}
-    <main class="main-content-container">
-        <div class="main-content main-content-list container">
-            {% include 'recipes/components/recipe.html' %}
-            {% include 'recipes/components/recipe.html' %}
-            {% include 'recipes/components/recipe.html' %}
-            {% include 'recipes/components/recipe.html' %}
-            {% include 'recipes/components/recipe.html' %}
-            {% include 'recipes/components/recipe.html' %}
-        </div>
-    </main>
+{% block title %}Home |{% endblock title %}
 
-    {% include 'recipes/components/footer.html' %}
-
-</body>
-
-</html>
+{% block content %}
+<div class="main-content main-content-list container">
+    {% for recipe in recipes %}
+        {% include 'recipes/components/recipe.html' %}
+    {% endfor %}
+</div>
+{% endblock content %}
